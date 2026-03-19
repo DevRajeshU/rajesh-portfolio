@@ -269,6 +269,7 @@ const Hero = () => {
 
       {/* Scroll cue */}
       <div
+        className="hero-scroll-cue"
         style={{ position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', opacity: mounted ? 1 : 0, transition: 'opacity 1s ease 1s', cursor: 'pointer' }}
         onClick={() => scroll('#about')}
       >
@@ -303,6 +304,9 @@ const Hero = () => {
           .hero-img-col > div:first-child > div:nth-child(3) { width:220px !important; height:220px !important; margin: 0 auto; }
           .hero-img-col > div:first-child > div:first-child { inset: 15px 15px 15px 15px !important; width:auto !important; height:auto !important; }
           .hero-img-col > div:first-child > div:nth-child(2) { inset: 5px 5px 5px 5px !important; width:auto !important; height:auto !important; }
+
+          /* Hide scroll cue on mobile — overlaps stats section */
+          .hero-scroll-cue { display: none !important; }
 
           /* CTA buttons — center on mobile */
           .hero-cta { justify-content: center; }
