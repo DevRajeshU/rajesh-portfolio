@@ -18,7 +18,7 @@ const projects = [
       { icon:'🔗', text:'RESTful API layer for cloud alert delivery and audit logging' },
       { icon:'⚡', text:'<2 second detection-to-alert latency across all deployments' },
     ],
-    github: 'https://github.com/DevRajeshU',
+    github: 'https://github.com/rajesh-uduthala',
   },
   {
     title: 'Fake Twitter Account Detection',
@@ -37,7 +37,7 @@ const projects = [
       { icon:'⬇️', text:'Reduced false positives by 15% via feature engineering' },
       { icon:'🖥️', text:'JavaScript frontend for interactive result exploration' },
     ],
-    github: 'https://github.com/DevRajeshU',
+    github: 'https://github.com/rajesh-uduthala',
   },
   {
   title: 'Job Application Tracker',
@@ -56,7 +56,7 @@ const projects = [
     { icon: '💾', text: 'localStorage persistence — data survives page refresh' },
     { icon: '🛡️', text: 'Error Boundary class component for graceful error handling' },
   ],
-  github: 'https://github.com/DevRajeshU/job-tracker',
+  github: 'https://github.com/rajesh-uduthala/job-tracker',
 },
 ];
 

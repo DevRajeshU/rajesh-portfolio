@@ -5,7 +5,7 @@ const contactInfo = [
   { icon:'📞', label:'Phone', value:'+91 9908378387', href:'tel:+919908378387', color:'#10b981' },
   { icon:'📍', label:'Location', value:'Hyderabad, Telangana', href:null, color:'#f59e0b' },
   { icon:'💼', label:'LinkedIn', value:'linkedin.com/in/rajesh-uduthala', href:'https://linkedin.com/in/rajesh-uduthala', color:'#0077b5' },
-  { icon:'🐙', label:'GitHub', value:'github.com/DevRajeshU', href:'https://github.com/DevRajeshU', color:'#a1a1aa' },
+  { icon:'🐙', label:'GitHub', value:'github.com/rajesh-uduthala', href:'https://github.com/rajesh-uduthala', color:'#a1a1aa' },
 ];
 
 const Contact = () => {

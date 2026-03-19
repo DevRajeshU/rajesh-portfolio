@@ -58,69 +58,69 @@ const Hero = () => {
     }}>
       {/* Dot-grid overlay */}
       <div style={{
-        position:'absolute',inset:0,
-        backgroundImage:'radial-gradient(rgba(99,102,241,0.15) 1px, transparent 1px)',
-        backgroundSize:'34px 34px',
-        maskImage:'radial-gradient(ellipse 75% 75% at center, black 20%, transparent 90%)',
-        pointerEvents:'none',
-      }}/>
+        position: 'absolute', inset: 0,
+        backgroundImage: 'radial-gradient(rgba(99,102,241,0.15) 1px, transparent 1px)',
+        backgroundSize: '34px 34px',
+        maskImage: 'radial-gradient(ellipse 75% 75% at center, black 20%, transparent 90%)',
+        pointerEvents: 'none',
+      }} />
 
       {/* Floating gradient orbs */}
-      {[['-120px','10%','600px','600px','8s'],['-60px','80%','350px','350px','11s','reverse']].map(([l,t,w,h,dur,dir='normal'],i)=>(
+      {[['-120px', '10%', '600px', '600px', '8s'], ['-60px', '80%', '350px', '350px', '11s', 'reverse']].map(([l, t, w, h, dur, dir = 'normal'], i) => (
         <div key={i} style={{
-          position:'absolute',left:l,top:t,width:w,height:h,borderRadius:'50%',
-          background:'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)',
-          animation:`float ${dur} ease-in-out infinite ${dir}`,pointerEvents:'none',
-        }}/>
+          position: 'absolute', left: l, top: t, width: w, height: h, borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)',
+          animation: `float ${dur} ease-in-out infinite ${dir}`, pointerEvents: 'none',
+        }} />
       ))}
 
-      <div className="container" style={{ position:'relative',zIndex:1,padding:'120px 28px 80px',width:'100%' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:'60px', alignItems:'center' }} className="hero-grid">
+      <div className="container" style={{ position: 'relative', zIndex: 1, padding: '120px 28px 80px', width: '100%' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '60px', alignItems: 'center' }} className="hero-grid">
 
           {/* Left column */}
           <div>
             {/* Status badge */}
-            <div style={{ ...ani(0.05), display:'inline-flex', alignItems:'center', gap:'10px', padding:'7px 18px', borderRadius:'100px', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.3)', marginBottom:'32px' }}>
+            <div style={{ ...ani(0.05), display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '7px 18px', borderRadius: '100px', background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.3)', marginBottom: '32px' }}>
               <span className="glow-dot" />
-              <span style={{ color:'#a1a1aa', fontSize:'0.82rem', fontWeight:'500' }}>Open to opportunities · Hyderabad, India</span>
+              <span style={{ color: '#a1a1aa', fontSize: '0.82rem', fontWeight: '500' }}>Open to opportunities · Hyderabad, India</span>
             </div>
 
             {/* Greeting + name */}
-            <div style={{ ...ani(0.1), marginBottom:'18px' }}>
-              <span style={{ color:'#71717a', fontFamily:"'Fira Code',monospace", fontSize:'1.05rem', fontWeight:'500' }}>
+            <div style={{ ...ani(0.1), marginBottom: '18px' }}>
+              <span style={{ color: '#71717a', fontFamily: "'Fira Code',monospace", fontSize: '1.05rem', fontWeight: '500' }}>
                 Hello, world! 👋 I'm
               </span>
               <h1 style={{
-                fontFamily:"'Outfit',sans-serif",
-                fontSize:'clamp(3rem, 7.5vw, 5.8rem)',
-                fontWeight:'900', lineHeight:'1.04', marginTop:'8px',
-                background:'linear-gradient(135deg, #ffffff 0%, #e0e7ff 40%, #818cf8 100%)',
-                WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text',
+                fontFamily: "'Outfit',sans-serif",
+                fontSize: 'clamp(3rem, 7.5vw, 5.8rem)',
+                fontWeight: '900', lineHeight: '1.04', marginTop: '8px',
+                background: 'linear-gradient(135deg, #ffffff 0%, #e0e7ff 40%, #818cf8 100%)',
+                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
               }}>
-                Uduthala<br/>Rajesh
+                Uduthala<br />Rajesh
               </h1>
             </div>
 
             {/* Typing line */}
-            <div style={{ ...ani(0.2), display:'flex', alignItems:'center', gap:'6px', marginBottom:'22px', minHeight:'3rem' }}>
-              <span style={{ color:'#6366f1', fontFamily:"'Fira Code',monospace", fontSize:'1.2rem', fontWeight:'600' }}>&gt;</span>
-              <span style={{ color:'#c7d2fe', fontFamily:"'Fira Code',monospace", fontSize:'clamp(1.1rem,2.5vw,1.5rem)', fontWeight:'500' }}>
+            <div style={{ ...ani(0.2), display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '22px', minHeight: '3rem' }}>
+              <span style={{ color: '#6366f1', fontFamily: "'Fira Code',monospace", fontSize: '1.2rem', fontWeight: '600' }}>&gt;</span>
+              <span style={{ color: '#c7d2fe', fontFamily: "'Fira Code',monospace", fontSize: 'clamp(1.1rem,2.5vw,1.5rem)', fontWeight: '500' }}>
                 {displayed}
               </span>
-              <span style={{ width:'3px', height:'1.4em', background:'#6366f1', display:'inline-block', borderRadius:'2px', animation:'blink 1s step-end infinite' }}/>
+              <span style={{ width: '3px', height: '1.4em', background: '#6366f1', display: 'inline-block', borderRadius: '2px', animation: 'blink 1s step-end infinite' }} />
             </div>
 
             {/* Subtitle */}
-            <p style={{ ...ani(0.3), color:'#a1a1aa', fontSize:'clamp(0.95rem,2vw,1.1rem)', maxWidth:'540px', lineHeight:'1.9', marginBottom:'40px' }}>
+            <p style={{ ...ani(0.3), color: '#a1a1aa', fontSize: 'clamp(0.95rem,2vw,1.1rem)', maxWidth: '540px', lineHeight: '1.9', marginBottom: '40px' }}>
               3 years crafting pixel-perfect, high-performance web & mobile apps across{' '}
-              <span style={{ color:'#c7d2fe', fontWeight:'600' }}>Real Estate</span>,{' '}
-              <span style={{ color:'#c7d2fe', fontWeight:'600' }}>Logistics</span> &{' '}
-              <span style={{ color:'#c7d2fe', fontWeight:'600' }}>Enterprise</span>.
+              <span style={{ color: '#c7d2fe', fontWeight: '600' }}>Real Estate</span>,{' '}
+              <span style={{ color: '#c7d2fe', fontWeight: '600' }}>Logistics</span> &{' '}
+              <span style={{ color: '#c7d2fe', fontWeight: '600' }}>Enterprise</span>.
               I turn complex requirements into clean, scalable products.
             </p>
 
             {/* CTA buttons */}
-            <div style={{ ...ani(0.4), display:'flex', gap:'14px', flexWrap:'wrap', marginBottom:'60px' }}>
+            <div className="hero-cta" style={{ ...ani(0.4), display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '60px' }}>
               <button className="btn btn-primary" onClick={() => scroll('#projects')}>
                 🚀 View Projects
               </button>
@@ -128,34 +128,34 @@ const Hero = () => {
                 ✉️ Contact Me
               </button>
               <a
-                href="/Rajesh_Resume_Developer.png"
+                href="/rajesh-portfolio/Rajesh_Dev.pdf"
                 download
                 style={{
-                  display:'inline-flex', alignItems:'center', gap:'8px',
-                  padding:'14px 24px', borderRadius:'12px', fontSize:'0.88rem', fontWeight:'600',
-                  color:'#71717a', border:'1.5px solid rgba(255,255,255,0.08)',
-                  transition:'all 0.3s ease',
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  padding: '14px 24px', borderRadius: '12px', fontSize: '0.88rem', fontWeight: '600',
+                  color: '#71717a', border: '1.5px solid rgba(255,255,255,0.08)',
+                  transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={e=>{e.currentTarget.style.color='#a1a1aa';e.currentTarget.style.borderColor='rgba(255,255,255,0.2)';}}
-                onMouseLeave={e=>{e.currentTarget.style.color='#71717a';e.currentTarget.style.borderColor='rgba(255,255,255,0.08)';}}
+                onMouseEnter={e => { e.currentTarget.style.color = '#a1a1aa'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
+                onMouseLeave={e => { e.currentTarget.style.color = '#71717a'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
               >
                 📄 Resume
               </a>
             </div>
 
             {/* Stats */}
-            <div style={{ ...ani(0.55), display:'flex', gap:'0', flexWrap:'wrap' }}>
+            <div className="hero-stats" style={{ ...ani(0.55), display: 'flex', gap: '0', flexWrap: 'nowrap' }}>
               {[
-                { num:'3+', label:'Years', sub:'of Experience' },
-                { num:'15+', label:'Projects', sub:'Delivered' },
-                { num:'3', label:'Domains', sub:'Real Estate · Logistics · Enterprise' },
+                { num: '3+', label: 'Years', sub: 'Experience' },
+                { num: '15+', label: 'Projects', sub: 'Delivered' },
+                { num: '3', label: 'Domains', sub: 'RE · Logistics · Enterprise' },
               ].map((s, i) => (
-                <div key={s.label} style={{ paddingRight:'32px', marginRight:'32px', borderRight: i < 2 ? '1px solid rgba(255,255,255,0.07)':'none' }}>
-                  <div style={{ fontFamily:"'Outfit',sans-serif", fontSize:'clamp(2rem,4vw,2.8rem)', fontWeight:'900', background:'linear-gradient(135deg,#fff,#818cf8)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', lineHeight:1 }}>
+                <div key={s.label} className="hero-stat-item" style={{ paddingRight: '24px', marginRight: '24px', borderRight: i < 2 ? '1px solid rgba(255,255,255,0.07)' : 'none', minWidth: 0 }}>
+                  <div style={{ fontFamily: "'Outfit',sans-serif", fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: '900', background: 'linear-gradient(135deg,#fff,#818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1 }}>
                     {s.num}
                   </div>
-                  <div style={{ color:'#fff', fontWeight:'700', fontSize:'0.92rem', marginTop:'2px' }}>{s.label}</div>
-                  <div style={{ color:'#52525b', fontSize:'0.75rem', marginTop:'2px' }}>{s.sub}</div>
+                  <div style={{ color: '#fff', fontWeight: '700', fontSize: '0.88rem', marginTop: '2px' }}>{s.label}</div>
+                  <div style={{ color: '#52525b', fontSize: '0.7rem', marginTop: '2px' }}>{s.sub}</div>
                 </div>
               ))}
             </div>
@@ -163,65 +163,103 @@ const Hero = () => {
 
           {/* Right — profile image */}
           <div style={{ ...ani(0.15) }} className="hero-img-col">
-            <div style={{ position:'relative', width:'320px' }}>
+            {/* Image wrapper with chips */}
+            <div style={{ position: 'relative', width: '320px' }}>
               {/* Spinning ring */}
               <div style={{
-                position:'absolute', inset:'-20px', borderRadius:'50%',
-                border:'2px solid transparent',
-                backgroundImage:'linear-gradient(#0a0a0a,#0a0a0a), linear-gradient(135deg,#6366f1,#8b5cf6,#06b6d4,#6366f1)',
-                backgroundOrigin:'border-box',
-                backgroundClip:'padding-box, border-box',
-                animation:'rotate360 10s linear infinite',
-              }}/>
+                position: 'absolute', inset: '-20px', borderRadius: '50%',
+                border: '2px solid transparent',
+                backgroundImage: 'linear-gradient(#0a0a0a,#0a0a0a), linear-gradient(135deg,#6366f1,#8b5cf6,#06b6d4,#6366f1)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'padding-box, border-box',
+                animation: 'rotate360 10s linear infinite',
+              }} />
               {/* Glow blob */}
               <div style={{
-                position:'absolute', inset:'-30px', borderRadius:'50%',
-                background:'radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%)',
-                animation:'pulse-ring 3s ease-in-out infinite',
-              }}/>
+                position: 'absolute', inset: '-30px', borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%)',
+                animation: 'pulse-ring 3s ease-in-out infinite',
+              }} />
               {/* Image */}
               <div style={{
-                borderRadius:'50%', overflow:'hidden',
-                width:'320px', height:'320px',
-                border:'3px solid rgba(99,102,241,0.4)',
-                position:'relative', zIndex:1,
-                boxShadow:'0 0 0 6px rgba(99,102,241,0.1), 0 20px 60px rgba(0,0,0,0.6)',
+                borderRadius: '50%', overflow: 'hidden',
+                width: '320px', height: '320px',
+                border: '3px solid rgba(99,102,241,0.4)',
+                position: 'relative', zIndex: 1,
+                boxShadow: '0 0 0 6px rgba(99,102,241,0.1), 0 20px 60px rgba(0,0,0,0.6)',
               }}>
                 <img
-                  src="/rajesh.png"
+                  src="/rajesh-portfolio/rajesh.png"
                   alt="Uduthala Rajesh"
-                  style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center', display:'block' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
                 />
               </div>
-              {/* Floating chips */}
-              <div style={{
-                position:'absolute', bottom:'-12px', left:'-20px',
-                background:'#1a1a1a', border:'1px solid rgba(99,102,241,0.3)',
-                borderRadius:'12px', padding:'10px 16px',
-                display:'flex', alignItems:'center', gap:'8px',
-                boxShadow:'0 8px 30px rgba(0,0,0,0.5)', zIndex:2,
+              {/* Floating chips — desktop only (absolute positioned) */}
+              <div className="hero-chip hero-chip-desktop" style={{
+                position: 'absolute', bottom: '-12px', left: '-20px',
+                background: '#1a1a1a', border: '1px solid rgba(99,102,241,0.3)',
+                borderRadius: '12px', padding: '10px 16px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.5)', zIndex: 2,
               }}>
-                <span style={{ fontSize:'1.3rem' }}>⚛️</span>
+                <span style={{ fontSize: '1.3rem' }}>⚛️</span>
                 <div>
-                  <div style={{ color:'#fff', fontSize:'0.8rem', fontWeight:'700' }}>React.js</div>
-                  <div style={{ color:'#71717a', fontSize:'0.7rem' }}>Primary Stack</div>
+                  <div style={{ color: '#fff', fontSize: '0.8rem', fontWeight: '700' }}>React.js</div>
+                  <div style={{ color: '#71717a', fontSize: '0.7rem' }}>Primary Stack</div>
+                </div>
+              </div>
+              <div className="hero-chip hero-chip-desktop" style={{
+                position: 'absolute', top: '-12px', right: '-20px',
+                background: '#1a1a1a', border: '1px solid rgba(16,185,129,0.3)',
+                borderRadius: '12px', padding: '10px 16px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+                boxShadow: '0 8px 30px rgba(0,0,0,0.5)', zIndex: 2,
+              }}>
+                <div style={{ width: '28px', height: '28px', flexShrink: 0, overflow: 'hidden', borderRadius: '4px' }}>
+                  <img
+                    src="/rajesh-portfolio/angular-icon.svg"
+                    alt="Angular"
+                    className="angular-icon"
+                    style={{ width: '28px', height: '28px', display: 'block', objectFit: 'contain' }}
+                  />
+                </div>
+                <div>
+                  <div style={{ color: '#fff', fontSize: '0.8rem', fontWeight: '700' }}>Angular</div>
+                  <div style={{ color: '#71717a', fontSize: '0.7rem' }}>Primary Stack</div>
+                </div>
+              </div>
+            </div>
+            {/* Mobile-only inline chips row */}
+            <div className="hero-chips-mobile">
+              <div style={{
+                background: '#1a1a1a', border: '1px solid rgba(99,102,241,0.3)',
+                borderRadius: '12px', padding: '8px 14px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
+              }}>
+                <span style={{ fontSize: '1.1rem' }}>⚛️</span>
+                <div>
+                  <div style={{ color: '#fff', fontSize: '0.78rem', fontWeight: '700' }}>React.js</div>
+                  <div style={{ color: '#71717a', fontSize: '0.65rem' }}>Primary Stack</div>
                 </div>
               </div>
               <div style={{
-                position:'absolute', top:'-12px', right:'-20px',
-                background:'#1a1a1a', border:'1px solid rgba(16,185,129,0.3)',
-                borderRadius:'12px', padding:'10px 16px',
-                display:'flex', alignItems:'center', gap:'8px',
-                boxShadow:'0 8px 30px rgba(0,0,0,0.5)', zIndex:2,
+                background: '#1a1a1a', border: '1px solid rgba(16,185,129,0.3)',
+                borderRadius: '12px', padding: '8px 14px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
               }}>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-                  width="28" height="28" alt="Angular"
-                  style={{ display:'block' }}
-                />
+                <div style={{ width: '24px', height: '24px', flexShrink: 0, overflow: 'hidden', borderRadius: '4px' }}>
+                  <img
+                    src="/rajesh-portfolio/angular-icon.svg"
+                    alt="Angular"
+                    className="angular-icon"
+                    style={{ width: '24px', height: '24px', display: 'block', objectFit: 'contain' }}
+                  />
+                </div>
                 <div>
-                  <div style={{ color:'#fff', fontSize:'0.8rem', fontWeight:'700' }}>Angular</div>
-                  <div style={{ color:'#71717a', fontSize:'0.7rem' }}>Primary Stack</div>
+                  <div style={{ color: '#fff', fontSize: '0.78rem', fontWeight: '700' }}>Angular</div>
+                  <div style={{ color: '#71717a', fontSize: '0.65rem' }}>Primary Stack</div>
                 </div>
               </div>
             </div>
@@ -231,26 +269,53 @@ const Hero = () => {
 
       {/* Scroll cue */}
       <div
-        style={{ position:'absolute',bottom:'32px',left:'50%',transform:'translateX(-50%)', display:'flex',flexDirection:'column',alignItems:'center',gap:'8px', opacity: mounted ? 1:0, transition:'opacity 1s ease 1s', cursor:'pointer' }}
+        style={{ position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', opacity: mounted ? 1 : 0, transition: 'opacity 1s ease 1s', cursor: 'pointer' }}
         onClick={() => scroll('#about')}
       >
-        <span style={{ color:'#3f3f46',fontSize:'0.72rem',letterSpacing:'0.12em',textTransform:'uppercase' }}>Scroll Down</span>
-        <div style={{ width:'24px',height:'40px',border:'2px solid #2a2a2a',borderRadius:'12px',display:'flex',justifyContent:'center',paddingTop:'6px' }}>
-          <div style={{ width:'4px',height:'8px',background:'#6366f1',borderRadius:'2px',animation:'scrollDot 2s infinite' }}/>
+        <span style={{ color: '#3f3f46', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Scroll Down</span>
+        <div style={{ width: '24px', height: '40px', border: '2px solid #2a2a2a', borderRadius: '12px', display: 'flex', justifyContent: 'center', paddingTop: '6px' }}>
+          <div style={{ width: '4px', height: '8px', background: '#6366f1', borderRadius: '2px', animation: 'scrollDot 2s infinite' }} />
         </div>
       </div>
 
       <style>{`
+        /* Angular icon hard constraint */
+        .angular-icon { width: 28px !important; height: 28px !important; max-width: 28px !important; max-height: 28px !important; }
+
+        /* Mobile chips row: always hidden — we use desktop floating chips on all sizes */
+        .hero-chips-mobile { display: none !important; }
+
         @media (max-width: 900px) {
+          /* Allow chips to float outside the section clip */
+          #hero { overflow: visible !important; }
+
           .hero-grid { grid-template-columns: 1fr !important; justify-items: center; text-align: center; }
           .hero-grid > div:first-child { align-items: center; display:flex; flex-direction:column; }
-          .hero-img-col { order: -1; }
-          .hero-img-col > div { width: 220px !important; }
-          .hero-img-col > div > div:last-of-type, .hero-img-col > div > div:nth-of-type(4) { display:none; }
+
+          /* Profile image column — wider wrapper so chips have room to float */
+          .hero-img-col { order: -1; padding-top: 60px; display: flex; flex-direction: column; align-items: center; }
+          /* Wrapper: 280px wide so chips at ±20px stay comfortably on-screen */
+          .hero-img-col > div:first-child { width: 280px !important; }
+          /* Show the floating chips, scaled slightly for mobile */
+          .hero-chip-desktop { display: flex !important; transform: scale(0.88); transform-origin: center; }
+          /* Image & ring sizing within the 280px wrapper */
           .hero-img-col img { width:220px !important; height:220px !important; }
-          .hero-img-col > div > div:first-child { inset: -14px !important; }
-          .hero-img-col > div > div:nth-child(2) { inset: -22px !important; }
-          .hero-img-col > div > div:nth-child(3) { width:220px !important; height:220px !important; }
+          .hero-img-col > div:first-child > div:nth-child(3) { width:220px !important; height:220px !important; margin: 0 auto; }
+          .hero-img-col > div:first-child > div:first-child { inset: 15px 15px 15px 15px !important; width:auto !important; height:auto !important; }
+          .hero-img-col > div:first-child > div:nth-child(2) { inset: 5px 5px 5px 5px !important; width:auto !important; height:auto !important; }
+
+          /* CTA buttons — center on mobile */
+          .hero-cta { justify-content: center; }
+
+          /* Stats — single row, compact */
+          .hero-stats { width: 100%; justify-content: center; }
+          .hero-stat-item { padding-right: 16px !important; margin-right: 16px !important; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+          /* Very small phones: stack stats vertically */
+          .hero-stats { flex-direction: column; align-items: center; gap: 20px; }
+          .hero-stat-item { border-right: none !important; padding-right: 0 !important; margin-right: 0 !important; }
         }
       `}</style>
     </section>
