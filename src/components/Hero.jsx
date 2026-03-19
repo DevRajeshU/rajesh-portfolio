@@ -4,7 +4,9 @@ const TYPING_TEXTS = [
   { text: 'React Developer', emoji: '⚛️' },
   { text: 'Angular Developer', emoji: '🅰️' },
   { text: 'Frontend Engineer', emoji: '🚀' },
-  { text: 'React Native Dev', emoji: '📱' },
+  { text: 'MERN Stack Dev', emoji: '🟢' },
+  { text: 'MEAN Stack Dev', emoji: '🔷' },
+  { text: 'JavaScript Engineer', emoji: '🟨' },
 ];
 
 const Hero = () => {
@@ -212,10 +214,14 @@ const Hero = () => {
                 display:'flex', alignItems:'center', gap:'8px',
                 boxShadow:'0 8px 30px rgba(0,0,0,0.5)', zIndex:2,
               }}>
-                <span style={{ fontSize:'1.3rem' }}>📱</span>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                  width="28" height="28" alt="Angular"
+                  style={{ display:'block' }}
+                />
                 <div>
-                  <div style={{ color:'#fff', fontSize:'0.8rem', fontWeight:'700' }}>React Native</div>
-                  <div style={{ color:'#71717a', fontSize:'0.7rem' }}>Mobile Dev</div>
+                  <div style={{ color:'#fff', fontSize:'0.8rem', fontWeight:'700' }}>Angular</div>
+                  <div style={{ color:'#71717a', fontSize:'0.7rem' }}>Primary Stack</div>
                 </div>
               </div>
             </div>

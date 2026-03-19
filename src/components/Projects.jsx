@@ -39,6 +39,25 @@ const projects = [
     ],
     github: 'https://github.com/DevRajeshU',
   },
+  {
+  title: 'Job Application Tracker',
+  emoji: '📋',
+  category: 'Web Application',
+  tags: ['React.js', 'Context API', 'useReducer', 'React Router', 'localStorage'],
+  color: '#22c55e',
+  year: '2026',
+  description:
+    'A full-featured job hunt management app to track applications, monitor status, and organize your entire job search — built with React.js and persistent localStorage storage.',
+  problem: 'Job seekers applying to multiple companies struggle to track application statuses, follow-up dates, and interview progress across spreadsheets and notes.',
+  solution: 'Built a React.js app with global state using useContext + useReducer, CRUD operations, real-time search and filter by status, and localStorage persistence for zero data loss.',
+  highlights: [
+    { icon: '⚛️', text: 'Global state management using useContext + useReducer' },
+    { icon: '🔍', text: 'Real-time search and filter across 4 application statuses' },
+    { icon: '💾', text: 'localStorage persistence — data survives page refresh' },
+    { icon: '🛡️', text: 'Error Boundary class component for graceful error handling' },
+  ],
+  github: 'https://github.com/DevRajeshU/job-tracker',
+},
 ];
 
 const Projects = () => {

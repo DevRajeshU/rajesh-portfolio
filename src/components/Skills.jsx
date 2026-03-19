@@ -10,9 +10,8 @@ const skillGroups = [
     skills: [
       { name:'React.js', level:95, note:'Primary framework · 3 yrs' },
       { name:'Angular', level:95, note:'NgRx, RxJS, lazy loading' },
-      { name:'React Native', level:80, note:'Cross-platform mobile' },
-      { name:'TypeScript', level:88, note:'Strict mode, generics' },
       { name:'JavaScript ES6+', level:92, note:'Async, closures, patterns' },
+      { name:'TypeScript', level:88, note:'Strict mode, generics' },
       { name:'HTML5 & CSS3', level:95, note:'Semantic, accessible' },
     ],
   },
@@ -26,7 +25,7 @@ const skillGroups = [
       { name:'Redux', level:88, note:'Redux Toolkit + thunks' },
       { name:'Context API', level:93, note:'Custom hooks pattern' },
       { name:'RxJS', level:90, note:'Observable streams' },
-      { name:'NgRx', level:75, note:'Angular state store' },
+      { name:'NgRx', level:87, note:'Angular state store' },
     ],
   },
   {
@@ -34,12 +33,13 @@ const skillGroups = [
     icon: '🔧',
     color: '#06b6d4',
     bgColor: 'rgba(6,182,212,0.08)',
-    desc: 'Full-stack awareness — I understand what happens beyond the browser.',
+    desc: 'Building full-stack apps — MERN & MEAN stack, REST APIs and server-side logic.',
     skills: [
-      { name:'Node.js', level:75, note:'Express, REST endpoints' },
+      { name:'Node.js', level:87, note:'Express · actively learning' },
       { name:'REST APIs', level:90, note:'Design + integration' },
-      { name:'JWT Auth', level:85, note:'RBAC, token refresh' },
-      { name:'MongoDB', level:70, note:'Schema design, queries' },
+      { name:'JWT Auth', level:87, note:'RBAC, token refresh' },
+      { name:'MongoDB', level:87, note:'Schema design, queries' },
+      { name:'Express.js', level:86, note:'Middleware, routing' },
     ],
   },
   {
@@ -51,7 +51,7 @@ const skillGroups = [
     skills: [
       { name:'Git & GitHub', level:92, note:'Branching, PRs, reviews' },
       { name:'Jira', level:88, note:'Sprint planning, agile' },
-      { name:'Postman', level:85, note:'API testing, collections' },
+      { name:'Postman', level:87, note:'API testing, collections' },
       { name:'VS Code', level:95, note:'Extensions, shortcuts' },
     ],
   },
